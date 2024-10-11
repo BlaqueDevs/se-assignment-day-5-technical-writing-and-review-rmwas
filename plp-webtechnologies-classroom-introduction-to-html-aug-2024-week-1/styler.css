@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4c7faf;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Ensures content stays inside the header */
+}
+
+.logo {
+    font-size: 36px; /* Increased font size for visibility */
+    font-weight: bold;
+    position: relative;
+}
+
+.uhai {
+    display: inline-block;
+    font-size: 40px; /* Slightly larger than the "app" */
+    padding-right: 5px;
+    color: white; /* You can adjust color as needed */
+}
+
+.app {
+    font-size: 24px; /* Smaller than "uhai" but still visible */
+    position: relative;
+    top: 8px; /* Moves the "app" slightly down */
+    color: #f0f0f0; /* Adjusting color to match "uhai" */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    margin-right: 20px;
+    padding: 40px; /* Add padding to ensure content inside is readable */
+    background-image: url('Telemedicine\ Moves\ Beyond\ Zoom\ Calls.jpeg'); /* Corrected image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Make sure the text contrasts with the background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+} /* Closing .content here */
+
+.sidebar {
+    flex: 1; /* Sidebar takes up 1 part of the space */
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333; /* Footer background color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Space above the footer */
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .sidebar {
+        margin-top: 20px;
+        flex: none; /* Sidebar will take full width on small screens */
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+    .navbar ul {
+        display: none; /* Hide default navbar */
+    }
+    .navbar.active ul {
+        display: flex; /* Show navbar when active */
+        flex-direction: column;
+    }
+}
+.content h1 {
+    font-size: 36px; /* Adjust this size for visibility (not too big) */
+    font-weight: bold; /* Ensures the heading stands out */
+    color: white; /* Ensures it contrasts well with the background image */
+}
+
+.content p {
+    font-size: 18px; /* Slightly larger than the default for better readability */
+    line-height: 1.6; /* Adjusts spacing between lines for better text flow */
+    color: white; /* Matches the contrast with the background */
+}
